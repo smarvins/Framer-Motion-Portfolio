@@ -6,12 +6,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import Responsive from 'react-responsive';
 import '../App.scss';
 
-
+{/* declaratives for different media queries */}
 const Desktop = props => <Responsive {...props} minWidth={992} />;
 const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991} />;
 const Mobile = props => <Responsive {...props} maxWidth={767} />;
 
 export default function Home(props) {
+  {/* using hooks as a means to link other pages */}
   const history = useHistory();
   const handleOnClick = useCallback(() => history.push('/Intro'), [history]);
   return (
@@ -21,6 +22,7 @@ export default function Home(props) {
         width={"100%"}
         height={"100%"}
         >
+        {/* Desktop view */}
         <Desktop>
           <Frame
             background={'black'}
@@ -51,6 +53,7 @@ export default function Home(props) {
             </Frame>
         </Desktop>
 
+        {/* Mobile view */}
         <Mobile>
           <Frame
             background={'black'}
@@ -81,6 +84,7 @@ export default function Home(props) {
             </Frame>
         </Mobile>
 
+        {/* Tablet view */}
         <Tablet>
           <Frame
             background={'black'}
