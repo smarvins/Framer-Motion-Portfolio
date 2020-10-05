@@ -1,19 +1,6 @@
 @import './variables.scss';
 @charset "utf-8";
 
-.link{
-  text-decoration: none;
-  text-align: center;
-}
-.link:hover {
-  text-decoration: underline;
-}
-.link:link {
-  text-decoration: none;
-}
-.link:visited {
-  text-decoration: none;
-}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
