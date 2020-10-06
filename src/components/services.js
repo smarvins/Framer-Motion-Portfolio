@@ -22,12 +22,11 @@ const item = {
 }
 
 
-export default function Intro(props) {
+export default function Services(props) {
   const history = useHistory();
   const handleOnClick = useCallback(() => history.push('/'), [history]);
   return (
     <AnimatePresence>
-      <Scroll height={400} width={'100%'} direction="horizontal">
       <Frame
         background={'black'}
         variants={container}
@@ -38,18 +37,17 @@ export default function Intro(props) {
           style={{ fontWeight: 'bold'}}
           size={300}
           gap={40}
-          paddingTop={40}
+          paddingBottom={60}
           paddingLeft={70}
           alignment="start"
           variants={container}
           initial="hidden"
           animate="show"
           >
-          <Frame variants={item} background="black" width={500} height={60} radius="5%" style={{color:'white', fontSize:70}}><span>I'm Steve</span></Frame>
-          <Frame variants={item} background="black" width={1200} height={50} radius="5%" style={{color:'white', fontSize:70}}><span>and I love writing <span style={{color:'#00fff5'}}>beautiful</span> code.</span></Frame>
+          <Frame variants={item} background="black" width={1200} height={70} radius="5%" style={{color:'white', fontSize:70}}><span>These are the <span style={{color:'#00fff5'}}>cool</span> stuff I can do for <span style={{color:'#00fff5'}}>you</span>.</span></Frame>
         </Stack>
 
-        <Frame top={300} left={70} width={1150} height={350} background="black">
+        <Frame top={250} left={70} width={1150} height={500} background="black">
           <Stack
             center
             distribution="space-evenly"
@@ -57,52 +55,13 @@ export default function Intro(props) {
             width={1100} height={300}
             padding={20}
             >
-            <Frame background="black" width={550} height={330} style={{color:'white', fontSize:30, fontWeight:'100', wordSpacing: '3px', lineHeight:'45px'}}>
-              As a <span style={{color:'#f0a500'}}>full-stack developer</span>, I bridge the gap between the front and back-end to create a robust, versatile application. Making it easy to communicate between <span style={{color:'#a7d129', borderBottom:'5px dotted #a7d129'}}>teams</span> and grasp the <span style={{color:'red'}}>idea</span> to one common <span style={{color:'#9d65c9'}}>cause</span>.
-            </Frame>
-            <Frame background="black" width={550} height={330}>
-              <Frame background="#3FBDAD" size={100}  center initial={{ x:0, y:0, borderRadius:'50%' }} animate={{ x:60, y:-60, borderRadius:'5%' }} transition={{ delay:1 }}>Back-end</Frame>
-              <Frame background="#278ea5" size={100} center initial={{ x:0, y:0, borderRadius:'50%' }} animate={{ x:0, y:0, borderRadius:'5%' }} transition={{ delay:1 }}>me</Frame>
-              <Frame background="#3FBDAD" size={100} center initial={{ x:0, y:0, borderRadius:'50%' }} animate={{ x:-60, y:60, borderRadius:'5%' }} transition={{ delay:1 }}>Front-end</Frame>
-            </Frame>
-          </Stack>
-        </Frame>
-
-        <Stack
-          style={{ fontWeight: 'bold'}}
-          size={300}
-          gap={40}
-          paddingTop={400}
-          paddingLeft={70}
-          alignment="start"
-          variants={container}
-          initial="hidden"
-          animate="show"
-          >
-          <Frame variants={item} background="black" width={500} height={60} radius="5%" style={{color:'white', fontSize:70}}><span>I'm Steve</span></Frame>
-          <Frame variants={item} background="black" width={1200} height={50} radius="5%" style={{color:'white', fontSize:70}}><span>and I love writing <span style={{color:'#00fff5'}}>beautiful</span> code.</span></Frame>
-        </Stack>
-
-        <Frame top={1100} left={70} width={1150} height={350} background="cyan">
-          <Stack
-            center
-            distribution="space-evenly"
-            direction="horizontal"
-            width={1100} height={300}
-            padding={20}
-            >
-            <Frame background="black" width={550} height={330} style={{color:'white', fontSize:30, fontWeight:'100', wordSpacing: '3px', lineHeight:'45px'}}>
-              As a <span style={{color:'#f0a500'}}>full-stack developer</span>, I bridge the gap between the front and back-end to create a robust, versatile application. Making it easy to communicate between <span style={{color:'#a7d129', borderBottom:'5px dotted #a7d129'}}>teams</span> and grasp the <span style={{color:'red'}}>idea</span> to one common <span style={{color:'#9d65c9'}}>cause</span>.
-            </Frame>
-            <Frame background="black" width={550} height={330}>
-              <Frame background="#3FBDAD" size={100}  center initial={{ x:0, y:0, borderRadius:'50%' }} animate={{ x:60, y:-60, borderRadius:'5%' }} transition={{ delay:1 }}>Back-end</Frame>
-              <Frame background="#278ea5" size={100} center initial={{ x:0, y:0, borderRadius:'50%' }} animate={{ x:0, y:0, borderRadius:'5%' }} transition={{ delay:1 }}>me</Frame>
-              <Frame background="#3FBDAD" size={100} center initial={{ x:0, y:0, borderRadius:'50%' }} animate={{ x:-60, y:60, borderRadius:'5%' }} transition={{ delay:1 }}>Front-end</Frame>
-            </Frame>
+              <Frame radius="5%" background="#3FBDAD" width={250} height={450} style={{color:'white', fontSize:30}}>Back-end</Frame>
+              <Frame radius="5%" background="#278ea5" width={250} height={450} style={{color:'white', fontSize:30}}>me</Frame>
+              <Frame radius="5%" background="#3FBDAD" width={250} height={450} style={{color:'white', fontSize:30}}>Front-end</Frame>
+              <Frame radius="5%" background="#3FBDAD" width={250} height={450} style={{color:'white', fontSize:30}}>Back-end</Frame>
           </Stack>
         </Frame>
       </Frame>
-      </Scroll>
     </AnimatePresence>
   );
 }
