@@ -27,7 +27,7 @@ export default function Intro(props) {
   const handleOnClick = useCallback(() => history.push('/'), [history]);
   return (
     <AnimatePresence>
-      <Scroll height={700} width={'100%'} direction="vertical">
+      <Scroll height={400} width={'100%'} direction="horizontal">
       <Frame
         background={'black'}
         variants={container}
