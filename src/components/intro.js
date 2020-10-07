@@ -28,7 +28,7 @@ export default function Intro(props) {
   const handleOnClick = useCallback(() => history.push('/'), [history]);
   return (
     <AnimatePresence>
-      <Scroll height={700} width={'100%'} direction="vertical">
+      <Scroll height={700} width={'100%'} direction="vertical" dragEnabled={false}>
       <Frame
         background={'black'}
         variants={container}
@@ -58,8 +58,8 @@ export default function Intro(props) {
             width={1100} height={300}
             padding={20}
             >
-            <Frame background="black" width={550} height={330} style={{color:'white', fontSize:30, fontWeight:'100', wordSpacing: '3px', lineHeight:'45px'}}>
-              As a <span style={{color:'#FDCC00'}}>full-stack developer</span>, I bridge the gap between the front and back-end to create a robust, versatile application. Making it easy to communicate between <span style={{color:'#a7d129', borderBottom:'5px dotted #a7d129'}}>teams</span> and grasp the <span style={{color:'red'}}>idea</span> to one common <span style={{color:'#9d65c9'}}>cause</span>.
+            <Frame background="black" width={550} height={220} style={{color:'white', fontSize:25, fontWeight:'100', wordSpacing: '3px', lineHeight:'45px'}}>
+              As a <span style={{color:'#00fff5'}}>full-stack developer</span>, I bridge the gap between the front and back-end to create a robust, versatile application. Making it easy to communicate between <span style={{color:'white'}}>teams</span> and grasp the <span style={{color:'white'}}>idea</span> to one common <span style={{color:'white'}}>cause</span>.
             </Frame>
             <Frame background="black" width={550} height={330}>
               <Frame background="#3FBDAD" size={100}  center initial={{ x:0, y:0, borderRadius:'50%' }} animate={{ x:60, y:-60, borderRadius:'5%' }} transition={{ delay:1 }}>Back-end</Frame>
