@@ -3,6 +3,7 @@ import {useCallback} from 'react';
 import { useHistory } from 'react-router-dom';
 import { Frame, Stack, Scroll } from "framer";
 import Services from './services';
+import Skills from './skills';
 import { motion, AnimatePresence } from "framer-motion";
 import '../App.scss';
 
@@ -71,6 +72,10 @@ export default function Intro(props) {
 
         <Frame top={800} background={'black'}>
           <Services/>
+        </Frame>
+
+        <Frame top={1800} background={'black'}>
+          <Skills/>
         </Frame>
 
       </Frame>
