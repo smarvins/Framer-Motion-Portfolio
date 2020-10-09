@@ -46,7 +46,7 @@ export default function Skills() {
               [ UI Frameworks ]
           </Frame>
           <Frame top={100} left={230} backgroundColor="#fff" borderRadius={10} animate={animate} onTap={() => cycle()} style={{ fontSize:20}}>
-              Bootstrap / Material UI / Bulma / Framer Motion
+              Bootstrap / Material UI / Bulma / Framer Motion / Grommet UI
           </Frame>
 
           <Frame top={200} width={250} height={60} borderRadius={10} backgroundColor="orange" >
