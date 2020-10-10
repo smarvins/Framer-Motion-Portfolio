@@ -71,16 +71,20 @@ export default function Intro(props) {
           </Stack>
         </Frame>
 
-        <Frame top={800} background={'black'}>
+        <Frame top={800} background={'transparent'}>
           <Services/>
         </Frame>
 
-        <Frame top={1800} background={'black'}>
+        <Frame top={1800} background={'transparent'}>
           <Work/>
         </Frame>
 
-        <Frame top={2800} background={'black'}>
+        <Frame top={2800} background={'transparent'}>
           <Skills/>
+        </Frame>
+
+        <Frame top={3800} background={'transparent'}>
+          <Work/>
         </Frame>
 
       </Frame>
