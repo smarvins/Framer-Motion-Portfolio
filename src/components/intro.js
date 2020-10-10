@@ -5,6 +5,7 @@ import { Frame, Stack, Scroll } from "framer";
 import Services from './services';
 import Skills from './skills';
 import Work from './work';
+import Fit from './fit';
 import { motion, AnimatePresence } from "framer-motion";
 import '../App.scss';
 
@@ -84,7 +85,7 @@ export default function Intro(props) {
         </Frame>
 
         <Frame top={3800} background={'transparent'}>
-          <Work/>
+          <Fit/>
         </Frame>
 
       </Frame>
