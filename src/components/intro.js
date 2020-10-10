@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { Frame, Stack, Scroll } from "framer";
 import Services from './services';
 import Skills from './skills';
+import Work from './work';
 import { motion, AnimatePresence } from "framer-motion";
 import '../App.scss';
 
@@ -75,6 +76,10 @@ export default function Intro(props) {
         </Frame>
 
         <Frame top={1800} background={'black'}>
+          <Work/>
+        </Frame>
+
+        <Frame top={2800} background={'black'}>
           <Skills/>
         </Frame>
 
