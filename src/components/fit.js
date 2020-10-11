@@ -29,7 +29,7 @@ export default function Fit(props) {
 
         <Frame top={100} left={70} width={1150} height={500} background="transparent">
           <Frame top={110} background="black" width={550} height={220} style={{color:'white', fontSize:25, fontWeight:'100', wordSpacing: '3px', lineHeight:'45px'}}>
-            Always on the lookout for new <span style={{color:'#fe346e'}}>tech</span>.
+            I'm always on the lookout for new <span style={{color:'#fe346e'}}>tech</span>.
           </Frame>
 
           <Frame
