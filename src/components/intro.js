@@ -7,9 +7,8 @@ import Skills from './skills';
 import Work from './work';
 import ContactUs from './contact';
 import Fit from './fit';
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useMotionValue  } from "framer-motion";
 import '../App.scss';
-
 
 const container = {
   hidden: { opacity: 0 },
@@ -22,8 +21,8 @@ const container = {
 }
 
 const item = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1 }
+  hidden: { opacity: 0, y: 100 },
+  show: { opacity: 1, y: 0 }
 }
 
 
@@ -54,7 +53,7 @@ export default function Intro(props) {
           <Frame variants={item} background="black" width={1200} height={50} radius="5%" style={{color:'white', fontSize:70}}><span>and I love writing <span style={{color:'#00fff5'}}>beautiful</span> code.</span></Frame>
         </Stack>
 
-        <Frame top={300} left={70} width={1150} height={350} background="black">
+        <Frame top={300} left={70} width={1150} height={350} background="black" variants={item} >
           <Stack
             center
             distribution="space-evenly"
@@ -73,23 +72,23 @@ export default function Intro(props) {
           </Stack>
         </Frame>
 
-        <Frame top={800} background={'transparent'}>
+        <Frame top={800} background={'transparent'} variants={item}>
           <Services/>
         </Frame>
 
-        <Frame top={1800} background={'transparent'}>
+        <Frame top={1800} background={'transparent'} variants={item}>
           <Work/>
         </Frame>
 
-        <Frame top={2800} background={'transparent'}>
+        <Frame top={2800} background={'transparent'} variants={item}>
           <Skills/>
         </Frame>
 
-        <Frame top={3800} background={'transparent'}>
+        <Frame top={3800} background={'transparent'} variants={item}>
           <Fit/>
         </Frame>
 
-        <Frame top={4600} background={'transparent'}>
+        <Frame top={4600} background={'transparent'} variants={item}>
           <ContactUs/>
         </Frame>
 

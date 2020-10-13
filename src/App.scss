@@ -1,7 +1,10 @@
 @import './variables.scss';
 @charset "utf-8";
 
-
+.cursor {
+  z-index: 1000; // or any value higher than your other elements
+	position: absolute;
+}
 
 .contact-form{
   color: white;
