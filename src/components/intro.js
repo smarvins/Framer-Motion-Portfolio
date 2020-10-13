@@ -89,7 +89,7 @@ export default function Intro(props) {
           <Fit/>
         </Frame>
 
-        <Frame top={4800} background={'transparent'}>
+        <Frame top={4600} background={'transparent'}>
           <ContactUs/>
         </Frame>
 
