@@ -2,9 +2,14 @@ import React from 'react';
 import emailjs from 'emailjs-com';
 import { Frame, Stack, useMotionValue, useTransform } from "framer";
 import { motion, AnimatePresence } from "framer-motion";
-import { useAlert } from 'react-alert'
+import { useAlert, type } from 'react-alert'
 import '../App.scss';
+import Responsive from 'react-responsive';
 
+
+const Desktop = props => <Responsive {...props} minWidth={992} />;
+const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991} />;
+const Mobile = props => <Responsive {...props} maxWidth={767} />;
 export default function ContactUs() {
   const alert = useAlert()
   function sendEmail(e) {
@@ -19,6 +24,8 @@ export default function ContactUs() {
   }
 
   return (
+    <>
+    <Desktop>
     <Frame
       background={'black'}
       height={650}
@@ -49,11 +56,88 @@ export default function ContactUs() {
         <div className="message-form">
           <div><label className="label_message">Message</label></div>
           <div><textarea className="textarea_message" name="message" /></div>
-          <div><input className="text_button" type="submit" value="⇨" onClick={() => {alert.show('Thanks! I have recieved your message and will get back to you in a bit.') }}/></div>
+          <div><input className="text_button" type="submit" value="⇨" onClick={() => {alert.show('Thanks! I have recieved your message and will get back to you in a bit.', {type: 'success'} )}}/></div>
         </div>
       </form>
     </Frame>
+    </Frame>
+    </Desktop>
 
-  </Frame>
+    <Tablet>
+    <Frame
+      background={'black'}
+      height={850}
+      >
+      <Stack
+        style={{ fontWeight: 'bold'}}
+        size={300}
+        gap={40}
+        paddingBottom={60}
+        paddingLeft={40}
+        alignment="start"
+        >
+        <Frame background="black" width={760} height={70} radius="5%" style={{color:'white', fontSize:60}}><span><span style={{color:'#00fff5'}}>Our</span> journey doesn't end here. Let's have a <span style={{color:'#00fff5'}}>chat</span>.</span></Frame>
+      </Stack>
+    <Frame width={650} height={400} top={175} left={50}  background="transparent">
+      <form className="contact-form" onSubmit={sendEmail}>
+
+        <div className="name-form">
+          <label className="label_name">What's your name?</label>
+          <input className="input_name" type="text" name="user_name" />
+        </div>
+
+        <div className="email-form">
+          <label className="label_email">Email</label>
+          <input className="input_email" type="email" name="user_email" />
+        </div>
+
+        <div className="message-form">
+          <div><label className="label_message">Message</label></div>
+          <div><textarea className="textarea_message" name="message" /></div>
+          <div><input className="text_button" type="submit" value="⇨" onClick={() => {alert.show('Thanks! I have recieved your message and will get back to you in a bit.', {type: 'success'} )}}/></div>
+        </div>
+      </form>
+    </Frame>
+    </Frame>
+    </Tablet>
+
+    <Mobile>
+    <Frame
+      background={'black'}
+      height={1100}
+      >
+      <Stack
+        style={{ fontWeight: 'bold'}}
+        size={300}
+        gap={40}
+        paddingBottom={60}
+        paddingLeft={40}
+        alignment="start"
+        >
+        <Frame background="black" width={300} height={70} radius="5%" style={{color:'white', fontSize:60}}><span><span style={{color:'#00fff5'}}>Our</span> journey doesn't end here. Let's have a <span style={{color:'#00fff5'}}>chat</span>.</span></Frame>
+      </Stack>
+    <Frame width={310} height={400} top={475}  background="transparent">
+      <form className="contact-form" onSubmit={sendEmail}>
+
+        <div className="name-form">
+          <label className="label_name">What's your name?</label>
+          <input className="input_name" type="text" name="user_name" />
+        </div>
+
+        <div className="email-form">
+          <label className="label_email">Email</label>
+          <input className="input_email" type="email" name="user_email" />
+        </div>
+
+        <div className="message-form">
+          <div><label className="label_message">Message</label></div>
+          <div><textarea className="textarea_message" name="message" /></div>
+          <div><input className="text_button" type="submit" value="⇨" onClick={() => {alert.show('Thanks! I have recieved your message and will get back to you in a bit.', {type: 'success'} )}}/></div>
+        </div>
+      </form>
+    </Frame>
+    </Frame>
+    </Mobile>
+  </>
   );
 }
