@@ -11,6 +11,7 @@ import { AnimatePresence } from "framer-motion";
 import Responsive from 'react-responsive';
 import '../App.scss';
 
+//Intro animation when loaded
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -26,15 +27,15 @@ const item = {
   show: { opacity: 1, y: 0 }
 }
 
+// Screen sizes for responsive design
 const Desktop = props => <Responsive {...props} minWidth={992} />;
 const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991} />;
 const Mobile = props => <Responsive {...props} maxWidth={767} />;
 
 export default function Intro(props) {
-  const history = useHistory();
-  const handleOnClick = useCallback(() => history.push('/'), [history]);
   return (
     <AnimatePresence>
+      //Desktop size
       <Desktop>
       <Scroll height={700} width={'100%'} direction="vertical" dragEnabled={false}>
       <Frame
@@ -59,6 +60,7 @@ export default function Intro(props) {
           </Stack>
 
           <Frame top={300} left={70} width={1150} height={350} background="black" variants={item} >
+            // Intro text
             <Stack
               center
               distribution="space-evenly"
@@ -69,6 +71,7 @@ export default function Intro(props) {
               <Frame background="black" width={550} height={220} style={{color:'white', fontSize:25, fontWeight:'100', wordSpacing: '3px', lineHeight:'45px'}}>
                 As a <span style={{color:'#00fff5'}}>full-stack developer</span>, I bridge the gap between the front and back-end to create a robust, versatile application. Making it easy to communicate between <span style={{color:'white'}}>teams</span> and grasp the <span style={{color:'white'}}>idea</span> to one common <span style={{color:'white'}}>cause</span>.
               </Frame>
+              // Stack animation
               <Frame background="black" width={550} height={330}>
                 <Frame background="#3FBDAD" size={100}  center initial={{ x:0, y:0, borderRadius:'50%' }} animate={{ x:60, y:-60, borderRadius:'5%' }} transition={{ delay:1 }}>Back-end</Frame>
                 <Frame background="#278ea5" size={100} center initial={{ x:0, y:0, borderRadius:'50%' }} animate={{ x:0, y:0, borderRadius:'5%' }} transition={{ delay:1 }}>me</Frame>
@@ -77,22 +80,27 @@ export default function Intro(props) {
             </Stack>
           </Frame>
 
+          //Service section
           <Frame top={800} background={'transparent'} variants={item}>
             <Services/>
           </Frame>
 
+          // Work section
           <Frame top={1800} background={'transparent'} variants={item}>
             <Work/>
           </Frame>
 
+          //Skills section
           <Frame top={2800} background={'transparent'} variants={item}>
             <Skills/>
           </Frame>
 
+          //Fit section
           <Frame top={3800} background={'transparent'} variants={item}>
             <Fit/>
           </Frame>
 
+          //Contact section
           <Frame top={4600} background={'transparent'} variants={item}>
             <ContactUs/>
           </Frame>
@@ -100,7 +108,7 @@ export default function Intro(props) {
       </Scroll>
     </Desktop>
 
-
+    //Tablet size
     <Tablet>
     <Scroll height={1024} width={'100%'} direction="vertical" dragEnabled={false}>
     <Frame
@@ -166,7 +174,7 @@ export default function Intro(props) {
     </Scroll>
     </Tablet>
 
-
+  //Mobile section
   <Mobile>
   <Scroll height={700} width={'100%'} direction="vertical" dragEnabled={false}>
   <Frame

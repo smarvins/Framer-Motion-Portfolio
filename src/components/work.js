@@ -4,6 +4,7 @@ import {AnimatePresence } from "framer-motion";
 import '../App.scss';
 import Responsive from 'react-responsive';
 
+// Screen sizes for responsive design
 const Desktop = props => <Responsive {...props} minWidth={992} />;
 const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991} />;
 const Mobile = props => <Responsive {...props} maxWidth={767} />;

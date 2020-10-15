@@ -4,11 +4,12 @@ import { AnimatePresence } from "framer-motion";
 import '../App.scss';
 import Responsive from 'react-responsive';
 
-
+// Screen sizes for responsive design
 const Desktop = props => <Responsive {...props} minWidth={992} />;
 const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991} />;
 const Mobile = props => <Responsive {...props} maxWidth={767} />;
 export default function Skills() {
+  // Expanding tab animation
   const [animate, cycle] = useCycle(
       { width: 50, height: 60, background:"white", color:"transparent" },
       { width: 800, height: 60, background:"orange", color:"white" }

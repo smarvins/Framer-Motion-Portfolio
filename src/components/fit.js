@@ -5,12 +5,12 @@ import Drag from './drag';
 import '../App.scss';
 import Responsive from 'react-responsive';
 
-
+// Screen sizes for responsive design
 const Desktop = props => <Responsive {...props} minWidth={992} />;
 const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991} />;
 const Mobile = props => <Responsive {...props} maxWidth={767} />;
 export default function Fit(props) {
-
+  //Drag functions
   const x = useMotionValue(0)
   const y = useMotionValue(0)
   const rotateX = useTransform(y, [-100, 100], [60, -60])
