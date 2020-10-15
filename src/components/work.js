@@ -1,8 +1,6 @@
 import React from 'react';
-import {useCallback} from 'react';
-import { useHistory } from 'react-router-dom';
 import { Frame, Stack, Scroll } from "framer";
-import { motion, AnimatePresence } from "framer-motion";
+import {AnimatePresence } from "framer-motion";
 import '../App.scss';
 import Responsive from 'react-responsive';
 
@@ -12,8 +10,6 @@ const Mobile = props => <Responsive {...props} maxWidth={767} />;
 
 
 export default function Work(props) {
-  const history = useHistory();
-  const handleOnClick = useCallback(() => history.push('/'), [history]);
   return (
     <AnimatePresence>
       <Desktop>

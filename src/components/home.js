@@ -1,8 +1,8 @@
 import React from 'react';
 import {useCallback} from 'react';
 import { useHistory } from 'react-router-dom';
-import { Frame, Stack } from "framer";
-import { motion, AnimatePresence } from "framer-motion";
+import { Frame } from "framer";
+import { AnimatePresence } from "framer-motion";
 import Responsive from 'react-responsive';
 import '../App.scss';
 

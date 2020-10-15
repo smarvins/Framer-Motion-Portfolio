@@ -1,7 +1,6 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import { Frame, Stack, Scroll, useCycle } from "framer";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import '../App.scss';
 import Responsive from 'react-responsive';
 
@@ -14,10 +13,7 @@ export default function Skills() {
       { width: 50, height: 60, background:"white", color:"transparent" },
       { width: 800, height: 60, background:"orange", color:"white" }
   )
-  const [animate1, cycle1] = useCycle(
-      { width: 50, height: 60, background:"white", color:"transparent" },
-      { width: 500, height: 60, background:"orange", color:"white" }
-  )
+
   return (
     <AnimatePresence>
       <Desktop>

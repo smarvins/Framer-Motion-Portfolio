@@ -1,8 +1,7 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
-import { Frame, Stack, useMotionValue, useTransform } from "framer";
-import { motion, AnimatePresence } from "framer-motion";
-import { useAlert, type } from 'react-alert'
+import { Frame, Stack } from "framer";
+import { useAlert } from 'react-alert'
 import '../App.scss';
 import Responsive from 'react-responsive';
 

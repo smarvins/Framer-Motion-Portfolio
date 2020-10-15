@@ -7,7 +7,7 @@ import Skills from './skills';
 import Work from './work';
 import ContactUs from './contact';
 import Fit from './fit';
-import { motion, AnimatePresence, useMotionValue  } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import Responsive from 'react-responsive';
 import '../App.scss';
 

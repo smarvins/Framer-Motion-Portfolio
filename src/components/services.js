@@ -1,6 +1,6 @@
 import React from 'react';
 import { Frame, Stack, Scroll } from "framer";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import '../App.scss';
 import Responsive from 'react-responsive';
 
