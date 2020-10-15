@@ -1,6 +1,6 @@
 ## Steve Marvins
 Hello! this is the current, updated site to showcase my skills as a developer.
-![Trailer pic](/intro.png)
+![Trailer pic](/Intro.png)
 
 ### Served and deployed on...
 Github
