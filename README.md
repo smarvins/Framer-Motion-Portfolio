@@ -1,9 +1,12 @@
 ## Steve Marvins
 Hello! this is the current, updated site to showcase my skills as a developer.
+
+
+###[Visit the site!](https://www.stevemarvins.dev@gmail.com/)
 ![Trailer pic](/Intro.png)
 
 ### Served and deployed on...
-Github
+Github | Netlify
 
 ### Tech used on this site:
 * React
