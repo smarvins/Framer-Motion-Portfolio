@@ -2,7 +2,7 @@
 Hello! this is the current, updated site to showcase my skills as a developer.
 
 
-###[Visit the site!](https://www.stevemarvins.dev@gmail.com/)
+### [Visit the site!](https://www.stevemarvins.dev@gmail.com/)
 ![Trailer pic](/Intro.png)
 
 ### Served and deployed on...
